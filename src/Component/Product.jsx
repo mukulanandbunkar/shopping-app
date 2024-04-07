@@ -15,7 +15,7 @@ useEffect(()=>{
  },[dispatch])
  
  const cartProduct=(val)=>{
-  dispatch(addToCart(val))
+   dispatch(addToCart(val))
  }
  
 
