@@ -15,8 +15,6 @@ useEffect(()=>{
  },[dispatch])
  
  const cartProduct=(val)=>{
-  console.log(product,val)
-  
   dispatch(addToCart(val))
  }
  

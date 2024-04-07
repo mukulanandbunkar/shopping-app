@@ -6,7 +6,6 @@ function Cart() {
      const dispatch= useDispatch()
      const cartItem=useSelector((state)=>state.cart)
     //  const count=useSelector((state)=>state.cart.value)
-     
      return(
     <div className='cart'>
      {cartItem.cart.map((val,idx)=>(
@@ -14,6 +13,7 @@ function Cart() {
                 <li> <img src={val.image} alt=""/></li>
                 <li><h3>Title:{' '}{val.title}</h3></li>
                 <li><h3>Price:{' '}{val.price}*{cartItem.cart.length}</h3></li>
+                <li><h3>Quantity:{' '}{val.noOfItem}</h3></li>
                 {/* <li><h3>Price:{' '}{val.price}*{count}={val.price*count}</h3>
                 <button id='plus' onClick={()=>dispatch(addition())}>+</button> <button onClick={()=>dispatch(subtraction())} id='minus'>-</button> </li>  */}
                 <li><button onClick={(e)=>dispatch(remove(val.id))} >Remove</button></li> 
